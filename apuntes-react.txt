@@ -1,0 +1,62 @@
+// Clase #1 ¿Que es un componente?
+    - En el archivo html de la carpeta public llamado "index.html" , dentro de la etiqueta de body se ecuentra un div con id="root" ,esta es la etiqueta en la cual se va a cargar todo desde react
+    
+    ¿QUE ES UN COMPONENTE DE REACT?
+    Un comoponente de react tiene la siguiente sintaxis:
+        function App(){}
+    diferencias entre elementos y componentes de react:
+        Los componentes empiezan con letra mayuscula: App
+        Los elementos estan compuestos por minusculas: header
+        Los elementos son encapsulados por los componentes, y estos elementos son los que se terminan transformando en Html
+ 
+    Para transformar este jsx a html existe un metodo llamado render(), que puede renderizar el componente que venga en los corchetes una o más veces.
+
+    Para cargar un componente dentro de otro componente de React primero se declara este componente en el archivo y posteriormente se agrega la siguiente sintaxis en el componente principal a agregar <NombreDelComponenteaAgregar />
+
+    Para poder hacer que estos componentes sean interactivos, reciben "props" o propiedades lo que en javascript se conoce como parametros de las funciones, pero no los son, aunque la sintaxis sea la mism, ejemplo:
+        function App(props){
+            return(
+                <h1>
+                    Completaste
+                    {props.completed} de
+                    {props.total} TODOs
+                </h1>
+            )
+        }
+    permitiendo así que se puedan cambiar los valores en el html dependiendo de las propiedades.
+
+    ¿Como se envian las props? 
+        sintaxis:   <TodoCount
+                        completed={3}
+                        total={5}
+                    />
+
+// Clase #2 ¿Como se comunican los componentes?
+    Los componentes se comunican mediante props (propiedades) que pueden tener las dos siguiente sintaxis:
+        - function App(props) // para así recibir el objeto props y de ahí utilizar por ejemplo "props.total" para obtener y usar el total.
+
+        - function App({ total, completed}) // en este caso ahorramos lineas de codigo al recibir unicamente los elementos del objeto requeridos, y su sintaxis al momento de utilizarlos dentro del componente es la siguiente: {total}
+    
+    Hay propiedades que estan definidas por defecto, como por ejemplo "children", este compone todos los componentes y elementos que esten dentro de las etiquetas del componente padre (<TodoList><TodoItem /></TodoList>) en este caso TodoItem es un children de TodoList y al momento de llamarlo como propiedad en TodoList, este elemento sera tomado correctamente por el componente padre. props.children ó {children}
+
+    // Como generar componentes unicos
+        - Se pueden generar componentes unicos dentro de un array con la propiedad "key" en la etiqueta del componente, ejemplo: key="2";
+
+    // ¿Como encapsular los fragmentos de React?
+        
+        - normalmente React solo puede recibir un componente a la vez, por lo cual para que funcione correctamente, todos los componentes y elementos deben estar encapsulados en una etiqueta, como por ejemplo un div: <div className="App"></div>
+        y dentro de este si se envian correctamente todos los componentes y elementos.
+        Si no se quiere utilizar este div como encapsulamiento, y se quiere que directamente todo este dentro del div root, se puede usar la etiqueta <React.fragment></React.fragment> o las etiquetas vacias <></>, para lo cual primeramente hay que importar react con la siguiente linea de codigo "import React from 'react';"
+
+// Clase #3 Estilos en React
+
+    // Estilos desde el archivo de React
+
+    Se puede usar la propiedad "style={}" en la etiqueta a estilizar y desde estos corcheters llamar una variable con los estilos, o tambíen se pueden utilizar los corchetes dobles "style={{}}" para declarar el objeto con los estilos ahí mismo.
+
+    Por defecto las medidas que se envien se convertiran a pixeles, para lo cual es importante mandar las mismas en formato string y con la referencia deseada, por ejemplo: fontSize: '24px' y  no fontSize: 24
+
+    // Estilos en un archivo Css 
+    Se pueden utilizar estilos desde el formato de Css en un archivo aparte que posteriormente se importa a nuestro proyecto con un import y la ruta unicamente.
+
+    No hay necesidad de cambiar la sintaxis como si hay que hacer desde el archivo de React.
