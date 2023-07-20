@@ -1,0 +1,17 @@
+.todoButton {
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px;
+    position: sticky;
+    bottom: -2;
+    background-color: rgb(117, 176, 178);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.todoButton:hover{
+    border-color: black;
+    border-width: 2px;
+    margin:6px;
+    cursor: pointer;
+}

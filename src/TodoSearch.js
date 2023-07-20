@@ -1,6 +1,7 @@
+import "./TodoSearch.css";
 function TodoSearch(){
     return(
-      <input placeholder="Cortar cebolla" />
+      <input className="todoSearch" placeholder="Cortar cebolla" />
     );
 }
 

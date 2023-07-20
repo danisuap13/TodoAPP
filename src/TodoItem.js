@@ -1,9 +1,10 @@
+import "./TodoItem.css";
 function TodoItem({ texto }){
     return(
-      <li>
-        <span>V</span>
+      <li className="todoList__todoItem">
+        <span className="todoList__todoItem_completedIcon">V</span>
         <p>{texto}</p>
-        <span>X</span>
+        <span className="todoList__todoItem_deleteIcon">X</span>
       </li>
     );
   }
