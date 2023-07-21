@@ -3,21 +3,31 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 20px;
+    border: 1px solid var(--Tea-green);
+    background-color: var(--Tea-green);
+    border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
+    color: var(--Navy-blue);    
 }
+
+.todoList__todoItem:hover {
+    background-color: var(--Mocha-Dandelion);
+    color: var(--Tea-green);
+}
+
 
 .todoList__todoItem_completedIcon {
     padding: 0 15px;
 }
 .Icon-check--active{
-    color: green;
+    color: var(--Mocha-Dandelion);
 }
 
 .Text-check--active{
-    text-decoration: line-through 1.3px;
+    text-decoration: line-through 1.7px;
+    text-decoration-color: var(--Navy-blue);
+    
 }
 
 .todoList__todoItem_deleteIcon {
