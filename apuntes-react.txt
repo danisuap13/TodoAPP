@@ -79,8 +79,17 @@
     //dentro del componente y antes del return:
     const [searchValue, setSearchValue] = React.useState('');
     
-    // en las porpiedades del elemento de React
+    // en las propiedades del elemento de React
       value = {searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value);
       }}
+
+// Clase #6 Comunicación entre estados
+
+    Los estados no se pueden comunicar de hijos a padres, por lo cual la sintaxis mencionada anteriormente que va dentro del componente y antes del return, debe ir en el archivo principal que contiene todos los componentes, y se envia como parametros al componente necesitado.
+
+     // (!!) este simbolo conocido como doble negación permite transformar los valores a recibir en valores booleanos, por ejemplo, si en la doble negación hay un string o un numero o un true, esta doble negación nos devolvera true. Mientras que si hay un false, o null, o un numero negativo, nos arrojara false.
+
+    //Estados derivados
+        Consisten en operaciones que se pueden realizar derivadas de los estados obtenidos, y pueden tambíen ser enviados a otro componente como propiedades

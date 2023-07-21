@@ -19,6 +19,7 @@
 
 .todoList__todoItem_completedIcon {
     padding: 0 15px;
+    font-size: 20px;
 }
 .Icon-check--active{
     color: var(--Mocha-Dandelion);
