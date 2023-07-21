@@ -60,3 +60,27 @@
     Se pueden utilizar estilos desde el formato de Css en un archivo aparte que posteriormente se importa a nuestro proyecto con un import y la ruta unicamente.
 
     No hay necesidad de cambiar la sintaxis como si hay que hacer desde el archivo de React.
+
+    // Estilos interactivos
+    Para poder realizar modificaciones en las etiquetas se utiliza la siguiente sintaxis para agregar codigo javascript en el nombre de la clase:
+    className={`todoList__todoItem_completedIcon ${ completado && "Icon-check--active"}`}
+    En este ejemplo se usan parentesis y comillas invertidas para poder introducir el script en ${} con el operador ternario && (si y solo sí) completado es verdadero se agrege la clase "Icon-check--active"
+
+// Clase #4 Enventos en React: onClick, onChange
+
+    Normalmente para escuchar eventos del DOM debemos usar atributos como onclick="" o nos tocaba añadir un addEventListener en el codigo de Javascript. Sin embargo en React solo hay que añadir "on" a la etiqueta seguido de la accion a escuchar, y así se agrega automaticamente un addEventListener, por ejemplo: onClick, onChange. Sin embargo para pasarle la accion que debe realizar, debemos hacerlo mediante funciones.
+
+    Dentro de estas funciones podemos recibir parametros, que nos devuelvan el objeto y sus elementos correspondientes a el boton a escuchar por ejemplo. Se suele nombrar al parametro como 'event', a el elemento que necesitamos 'event.target' y por ultimo al valor que esta en una barra de busqueda como 'event.target.value'
+
+// Clase #5 ¿Que es el estado?
+
+    El estado es la la manera en que podemos escuchar y guardar eventos con React, ya que se renderiza el elemento que es actualizado de estado cada vex que esto sucede. la sintaxis es la siguiente:
+
+    //dentro del componente y antes del return:
+    const [searchValue, setSearchValue] = React.useState('');
+    
+    // en las porpiedades del elemento de React
+      value = {searchValue}
+      onChange={(event) => {
+        setSearchValue(event.target.value);
+      }}

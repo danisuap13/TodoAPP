@@ -12,6 +12,13 @@
 .todoList__todoItem_completedIcon {
     padding: 0 15px;
 }
+.Icon-check--active{
+    color: green;
+}
+
+.Text-check--active{
+    text-decoration: line-through 1.3px;
+}
 
 .todoList__todoItem_deleteIcon {
     padding: 0 15px;

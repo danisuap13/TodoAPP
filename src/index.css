@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-image: url('./graceway-gourmet-dairy_2048x1365.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
@@ -14,6 +19,7 @@ code {
 
 #root {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  justify-self: flex-end;
 }
 
