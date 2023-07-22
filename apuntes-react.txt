@@ -93,3 +93,17 @@
 
     //Estados derivados
         Consisten en operaciones que se pueden realizar derivadas de los estados obtenidos, y pueden tambíen ser enviados a otro componente como propiedades
+
+Clase #7 Completando y Eliminando TODOs
+
+    Se agrego la propiedad "onComplete={() => completeTodo(todo.text)}" al componente TodoItem, hay que encapsularla dentro de otra funcion obligatoriamente debido a que react necesita ejecutarla el mismo, y como necesitamos pasarle los parametros mediante los parentesis, no la podemos enviar sin ejecutarla, excepto si la enviamos encapsulada
+
+    Se creo la funcion completeTodo:
+        const completeTodo = (text) => {
+            const newTodos = [...todos];
+            const todoIndex = newTodos.findIndex(
+            (todo) => todo.text == text 
+            );
+            newTodos[todoIndex].completed = true;
+            setTodos(newTodos);
+        };

@@ -5,6 +5,7 @@ import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import { CreateTodoButton } from './CreateTodoButton';
 import './App.css';
+import { createPortal } from 'react-dom';
 
 const defaultTodos = [
   { text: 'Cortar Cebolla', completed: true},
@@ -25,6 +26,23 @@ function App() {
     const searchText = searchValue.toLowerCase()
     return todoText.includes(searchText)
   });
+  
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text == text 
+    );
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos]
+    const todoIndex = newTodos.findIndex(todo => todo.text == text )
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos)
+  }
+
   return (
     <React.Fragment>
       <TodoCounter completed={completedTodos} total={totalTodos}/>
@@ -35,7 +53,7 @@ function App() {
 
       <TodoList>
         {searchedTodos.map(todo => (
-          <TodoItem key={todo.text} texto ={todo.text} completado = {todo.completed}/>
+          <TodoItem key={todo.text} texto ={todo.text} completado = {todo.completed} onComplete={() => completeTodo(todo.text)} onDelete = {() => deleteTodo(todo.text)}/>
         ))}
       </TodoList>
       

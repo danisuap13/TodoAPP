@@ -3,17 +3,21 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    border: 1px solid var(--Tea-green);
+    border: 1px solid var(--Mocha-Dandelion);
     background-color: var(--Tea-green);
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 5px;
-    color: var(--Navy-blue);    
+    margin: 10px;
+    color: var(--Mocha-Dandelion);    
 }
 
-.todoList__todoItem:hover {
+.todoList__todoItem--active {
     background-color: var(--Mocha-Dandelion);
+    border-color: var(--Tea-green);
     color: var(--Tea-green);
+}
+.todoList__todoItem--active:last-child {
+    color: black;
 }
 
 
@@ -21,6 +25,7 @@
     padding: 0 15px;
     font-size: 20px;
 }
+
 .Icon-check--active{
     color: var(--Mocha-Dandelion);
 }
@@ -33,4 +38,7 @@
 
 .todoList__todoItem_deleteIcon {
     padding: 0 15px;
+    font-size: 20px;
+    position: relative;
+    bottom: 25px;
 }

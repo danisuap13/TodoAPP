@@ -41,6 +41,9 @@ code {
   h1{
     padding: 30px;
   }
+  .todoSearch {
+    margin: 10px !important;
+  }
 }
 @media (min-width: 800px){
   body{
@@ -49,4 +52,5 @@ code {
   .counter{
     padding: 30px;
   }
+  
 }
