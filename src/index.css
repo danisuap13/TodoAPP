@@ -1,56 +1,13 @@
-:root {
-    /* // Paleta de color con cafe */
-  
-  --Navy-blue: #A1A2A6;
-  --Cyan:#024959;
-  --Turqouise:#F2C12E;
-  --Mocha-Dandelion: #F2AE30;
-  --Tea-green: #593E25;
-
-}
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  background-image: url('./graceway-gourmet-dairy_2048x1365.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  backdrop-filter: blur(5px);
-  color: var(--Tea-green);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  padding: 0;
+  background: #F2F4F5;
+  color: #1E1E1F;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
-}
-
-@media (min-width: 600px){
-
-  h1{
-    padding: 30px;
-  }
-  .todoSearch {
-    margin: 10px !important;
-  }
-}
-@media (min-width: 800px){
-  body{
-    height: 100vh;
-  }
-  .counter{
-    padding: 30px;
-  }
-  
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
 }

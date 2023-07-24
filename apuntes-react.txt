@@ -110,3 +110,12 @@ Clase #7 Completando y Eliminando TODOs
         };
 
     y ya finalmente se agrega la propiedad "onClick={props.onComplete}" dentro de la etiqueta de TodoItem
+
+Clase #8 Colores dinamicos
+
+    Se pueden utilizar las arrow functions para permitir atributos dinamicos, como en la siguiente sintaxis: 
+    const iconTypes = {
+        "complete": (color) => <CheckSVG fill={color}/>,
+        "delete": (color) => <DeleteSVG fill={color}/>
+    };
+    {iconTypes[type](color)}

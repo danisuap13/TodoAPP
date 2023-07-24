@@ -1,5 +1,5 @@
-.todoList {
-    align-self: center;
-    justify-self: center;
-    width: 70vw;
+.TodoList {
+  margin: 0;
+  padding: 0 0 56px 0;
+  list-style: none;
 }

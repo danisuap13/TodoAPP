@@ -1,44 +1,20 @@
-.todoList__todoItem{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    border: 1px solid var(--Mocha-Dandelion);
-    background-color: var(--Tea-green);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    color: var(--Mocha-Dandelion);    
+.TodoItem {
+  background-color: #FAFAFA;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
 }
 
-.todoList__todoItem--active {
-    background-color: var(--Mocha-Dandelion);
-    border-color: var(--Tea-green);
-    color: var(--Tea-green);
+.TodoItem-p {
+  margin: 24px 0 24px 24px;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 }
-.todoList__todoItem--active:last-child {
-    color: black;
-}
-
-
-.todoList__todoItem_completedIcon {
-    padding: 0 15px;
-    font-size: 20px;
-}
-
-.Icon-check--active{
-    color: var(--Mocha-Dandelion);
-}
-
-.Text-check--active{
-    text-decoration: line-through 1.7px;
-    text-decoration-color: var(--Navy-blue);
-    
-}
-
-.todoList__todoItem_deleteIcon {
-    padding: 0 15px;
-    font-size: 20px;
-    position: relative;
-    bottom: 25px;
+.TodoItem-p--complete {
+  text-decoration: line-through;
 }

@@ -1,10 +1,12 @@
-import "./TodoList.css";
-function TodoList(props){
-    return(
-      <ul className="todoList">
-        {props.children}
-      </ul>
-    );
+import './TodoList.css';
+
+function TodoList({ children }) {
+  return (
+    <ul className="TodoList">
+      {children}
+    </ul>
+  );
 }
 
-export { TodoList } ;
+export { TodoList };
+

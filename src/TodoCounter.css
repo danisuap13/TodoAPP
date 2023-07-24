@@ -1,11 +1,11 @@
-h1 {
-    font-size: 24px;
-    text-align: center;
-    margin: 15px 0;
-    width: 60vw;
-    padding: 20px 5px;
-    align-self: center;
-    border: solid 2px;
-    border-radius: 10px;
-    background-color: var(--Turqouise);
+.TodoCounter {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 48px;
+  font-weight: normal;
+}
+
+.TodoCounter span {
+  font-weight: bold;
 }
