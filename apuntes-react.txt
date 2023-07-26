@@ -119,3 +119,20 @@ Clase #8 Colores dinamicos
         "delete": (color) => <DeleteSVG fill={color}/>
     };
     {iconTypes[type](color)}
+
+Clase #9 Local Storage
+
+    Es un elemento que permite guardar unicamente strings, en el navegador localmente y volverlos a mostrar aunque se haya refrezcado la pagína,
+    por lo cual si queremos enviarle objetos se puede usar "JSON.stringify(objetoaAlmacenar)"
+        - Siempre que necesitemos guardar en local storage hay que hacer un stringify, y siempre que necesitemos leer este objeto hay que hacerle un "JSON.parse()" al elemento co stringify.
+        
+Clase #10 Custom Hooks
+
+    React.js recomienda al momento de declarar un custom hook que siempre empiece con la palabra "use", de la misma manera que los default hooks estan configurados, como por ejemplo el hook "useState()". 
+
+    Basicamente los custom hooks sirven para encapsular codigo y de esta manera abstraerlo para así mejorar la experiencia al momento de llegar a editarlo.
+
+Clase #11 useEffect()
+
+    "useEffect(<function>, <dependency>)" el segundo argumento es opcional, y acepta arrays, si se envia "[]" como segundo argumento, la función encapsulada dentro de useEffect solo correra en el primer render.
+    [prop, state], si se utiliza esto como segundo argumento, la función correra en el primer render, y cuando se actulicen estos estados.
