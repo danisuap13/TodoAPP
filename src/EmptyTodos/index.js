@@ -1,8 +1,11 @@
 import React from 'react';
+import './EmptyTodos.css'
 
 function EmptyTodos() {
   return (
-    <p>¡Crea tu primer TODO!</p>
+    <div className='empty-list-container'>
+      <p className='empty-list'>¡LA LISTA DE TODOS ESTÁ VACIA!</p>
+    </div>
   );
 }
 
