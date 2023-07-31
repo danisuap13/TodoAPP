@@ -151,3 +151,11 @@ Clase #12 React Context
         Las llaves dentro de una etiqueta son para insertar JavaScript JSX
 
         Los TodoContex.Consumer llama a props.children igual que TodoContext.Provider solo que "Consumer" lo hace mediante render Functions, lo cual significa que la etiqueta no espera recibir directamente un componente, si no una función.
+
+Clase # 13 - useContext
+
+    Para usar esta caracteristica "Hook" de React, se va al componente que consumirá las props y se agrega React.useContext(TodoContex), lo que devolverá las props que se necesiten.
+
+Clase # 12 React Portals
+
+    Para crearlos es necesario importar ReactDOM from react-dom, se usa mediante la sintaxis ReactDOM.createPortal("bloque a renderizar", document.getElementById('idElemento')), por lo cual hay que crear un nuevo elemento aparte de root en el index.html
