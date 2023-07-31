@@ -6,35 +6,33 @@ import { TodosLoading } from '../TodosLoading';
 import { TodosError } from '../TodosError';
 import { EmptyTodos } from '../EmptyTodos';
 import { CreateTodoButton } from '../CreateTodoButton';
+import { TodoContext } from '../TodoContext';
 
+function AppUI() {
+  return (
+    <>
+      <TodoCounter />
+      <TodoSearch />
 
-function AppUI ({ 
-    loading,
-    error,
-    completedTodos,
-    totalTodos,
-    searchValue,
-    setSearchValue,
-    searchedTodos,
-    completeTodo,
-    deleteTodo
-}) {
-    return (
-        <>
-          <TodoCounter
-            completed={completedTodos}
-            total={totalTodos} 
-          />
-          <TodoSearch
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-          />
-    
+      <TodoContext.Consumer>
+        {({
+          loading,
+          error,
+          searchedTodos,
+          completeTodo,
+          deleteTodo,
+        }) => (
           <TodoList>
-            {loading && <TodosLoading />} 
-            {error && <TodosError />}
+            {loading && (
+              <>
+                <TodosLoading />
+                <TodosLoading />
+                <TodosLoading />
+              </>
+            )}
+            {error && <TodosError/>}
             {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
-            
+
             {searchedTodos.map(todo => (
               <TodoItem
                 key={todo.text}
@@ -45,10 +43,12 @@ function AppUI ({
               />
             ))}
           </TodoList>
-          
-          <CreateTodoButton />
-        </>
-      );
+        )}
+      </TodoContext.Consumer>
+      
+      <CreateTodoButton />
+    </>
+  );
 }
 
 export { AppUI };

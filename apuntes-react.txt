@@ -136,3 +136,18 @@ Clase #11 useEffect()
 
     "useEffect(<function>, <dependency>)" el segundo argumento es opcional, y acepta arrays, si se envia "[]" como segundo argumento, la función encapsulada dentro de useEffect solo correra en el primer render.
     [prop, state], si se utiliza esto como segundo argumento, la función correra en el primer render, y cuando se actulicen estos estados.
+
+Clase #12 React Context
+    Es muy importante ver los términos ya que es algo que se ve comúnmente en react:
+    
+        Prop Drilling: es una paso del desarrollo que ocurre cuando necesitamos obtener datos que están en varias capas en el árbol de componentes React.
+
+        Este se ve siempre cuando pasamos props entre hijos, luego ese a otros hijos y así sucesivamente… la solución es usar context:
+
+        Context: es un elemento que podemos crear en React para establecer una comunicación directa entre un componente en un nivel muy alto y uno en un nivel mucho más bajo.
+
+        Por ende context permite acceder a los valores de forma directa.
+
+        Las llaves dentro de una etiqueta son para insertar JavaScript JSX
+
+        Los TodoContex.Consumer llama a props.children igual que TodoContext.Provider solo que "Consumer" lo hace mediante render Functions, lo cual significa que la etiqueta no espera recibir directamente un componente, si no una función.
